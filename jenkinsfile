@@ -38,6 +38,7 @@ pipeline {
           FROM mayan31370/openjdk-alpine-with-chinese-timezone:8-jdk
           RUN  mkdir -p /opt/app/power-job
           RUN echo $APPNAME > /tmp/1.txt
+          RUN echo "dev2" > /tmp/1.txt
           COPY ./application-zz.properties /opt/app/power-job/ 
           ADD ./powerjob-server-3.4.4.jar /opt/app/power-job/
           COPY ./start.sh  /opt/app/power-job/
